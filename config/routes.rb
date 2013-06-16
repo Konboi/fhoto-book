@@ -1,4 +1,12 @@
 FhotoBook::Application.routes.draw do
+
+  root 'home#index'
+
+  controller 'facebook' do
+    get "facebook/oauth"
+    get "facebook/callback"
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
